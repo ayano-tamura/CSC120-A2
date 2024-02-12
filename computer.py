@@ -14,12 +14,20 @@ class Computer:
 
     # What methods will you need?
     def update_price(self, new_price: int):
+        """update the price of the item to the new price.
+
+        :param new_price: (int) the new price to change the price of the item into
+        """
         self.price = new_price
         # return self.price
         
 
     def update_OS(self, operating_system: str):
-        self.new_OS = self.operating_system
+        """Update the OS of the device through the operating system.
+
+        :param operating_system: (str) the system to update the OS into
+        """
+        self.new_OS = operating_system
         return self.new_OS
 
     

@@ -12,14 +12,19 @@ class ResaleShop:
         self.inventory = {}
     # What methods will you need?
     def buy(self, computer: Computer): 
-        """
-    
+        """Add a computer into inventory through this function, increase item id by one when added.
+
+        :param computer: computer to add
         """
         self.item_id += 1
         self.inventory[self.item_id] = computer
         return self.item_id
   
     def sell(self, item_id: int):
+        """If the item requested is in the inventory, sell the item and delete the item from inventory. Otherwise, return not found message.
+
+        :param item_id: (int) item id requested to sell
+        """
         if item_id in self.inventory:
             del self.inventory[item_id]
             print("Item", item_id, "sold!")
@@ -27,6 +32,10 @@ class ResaleShop:
             print("Item", item_id, "not found. Please select another item to sell.")
 
     def update_price(self,item_id: int, new_price: int):
+        """Update the price of the requested item id to a newly given price.
+        :param item_id: (int) item id to change the price
+        :param new_price: (int) the new price number to change the item into
+        """
         if self.item_id in self.inventory:
             computer = self.inventory[self.item_id] 
             computer.update_price(new_price)
@@ -35,6 +44,8 @@ class ResaleShop:
             print("Item", item_id, "not found. Cannot update price.")
         
     def print_inventory(self):
+        """Print the information and the location of the items in inventory.
+        """
         # If the inventory is not empty
         if self.inventory:
         # For each item
@@ -45,6 +56,11 @@ class ResaleShop:
             print("No inventory to display.")
 
     def refurbish(self, item_id: int, new_os: str):
+        """refurbish the given item id's computer details depending on the computer's information. Update the computer to a new os if needed.
+
+        :param item_id: (int) requested input item id to refurbish
+        :param new_os: (str) input of new_os to see if the new_os is needed
+        """
         if item_id in self.inventory:
             computer = self.inventory[item_id]
             if item_id in self.inventory:

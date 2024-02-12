@@ -1,3 +1,5 @@
 Use this file to record your reflection on this assignment. 
 
 What worked, what didn't, what advice would you give someone taking this course in the future?
+
+Understanding what to do in the assignment was one of the most difficult tasks for me. Once I was able to understand to distribute the given functions, and add new functions, the process became a little easier. There were steps in import and accessing objects across different files that I had trouble implementing into my code. Once I was able to get each of the functions into the correct files, writing the rest of the code became easier because the code made sense in which classes they were under. Turning the functions into objects is still pretty confusing to me, but I am hoping that the concept will become more clear through the other assignments. 
